@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura Dental — Pide tu hora al dentista</title>
+  <meta name="description" content="Aura Dental: elige día y hora, y pide tu hora al dentista por WhatsApp en menos de un minuto." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a href="#" class="brand" aria-label="Aura Dental, inicio">
+        <span class="brand__halo" aria-hidden="true"></span>
+        Aura Dental
+      </a>
+      <a href="https://wa.me/56971389276" class="topbar__phone" target="_blank" rel="noopener">+56 9 7138 9276</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero: el formulario de reserva es la tarjeta de cita -->
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <h1 id="hero-title">Pide tu hora al dentista en un minuto.</h1>
+        <p class="hero__lead">
+          Elige el día y la hora que te acomoden. Te llega la solicitud lista para enviar por WhatsApp
+          y te confirmamos el mismo día.
+        </p>
+        <ul class="assurances">
+          <li>Te decimos el costo antes de empezar cualquier tratamiento.</li>
+          <li>Si tienes dolor, te buscamos un espacio hoy mismo.</li>
+          <li>Puedes cambiar o cancelar tu hora con un mensaje.</li>
+        </ul>
+      </div>
+
+      <form class="ticket" id="booking" novalidate aria-labelledby="ticket-title">
+        <div class="ticket__head">
+          <h2 id="ticket-title">Tu próxima hora</h2>
+          <p class="ticket__summary" id="summary" aria-live="polite">Elige un día</p>
+        </div>
+
+        <fieldset class="step">
+          <legend>Día</legend>
+          <div class="days" id="days"></div>
+        </fieldset>
+
+        <fieldset class="step">
+          <legend>Hora</legend>
+          <div class="times" id="times"></div>
+        </fieldset>
+
+        <div class="step step--fields">
+          <div class="field">
+            <label for="name">Tu nombre</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="María López" />
+          </div>
+          <div class="field">
+            <label for="reason">Motivo</label>
+            <select id="reason" name="reason" required>
+              <option value="" disabled selected>Elige uno</option>
+              <option>Evaluación y limpieza</option>
+              <option>Blanqueamiento</option>
+              <option>Ortodoncia</option>
+              <option>Dolor o urgencia</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="ticket__error" id="error" role="alert"></p>
+
+        <a class="cta" id="cta" href="https://wa.me/56971389276" target="_blank" rel="noopener">
+          Pedir hora por WhatsApp
+        </a>
+        <p class="ticket__note" id="note">Se abre WhatsApp con tu solicitud escrita. Solo tienes que enviarla.</p>
+      </form>
+    </section>
+
+    <!-- Lo que pasa después: es una secuencia real, por eso va numerada -->
+    <section class="next" aria-labelledby="next-title">
+      <div class="wrap">
+        <h2 id="next-title" class="section-title">Qué pasa después de pedir tu hora</h2>
+        <ol class="steps">
+          <li>
+            <h3>Envías el mensaje</h3>
+            <p>WhatsApp se abre con tu nombre, el motivo, el día y la hora. Lo envías tal cual.</p>
+          </li>
+          <li>
+            <h3>Te confirmamos</h3>
+            <p>Respondemos el mismo día hábil para confirmar tu hora o proponerte otra cercana.</p>
+          </li>
+          <li>
+            <h3>Llegas a tu hora</h3>
+            <p>Te atendemos a la hora acordada. La primera visita dura entre 30 y 45 minutos.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Tratamientos con su duración aproximada -->
+    <section class="care wrap" aria-labelledby="care-title">
+      <div class="care__intro">
+        <h2 id="care-title" class="section-title">Lo que atendemos</h2>
+        <a href="#booking" class="care__link">Pedir hora</a>
+      </div>
+      <table class="care__table">
+        <thead>
+          <tr><th scope="col">Tratamiento</th><th scope="col">Duración aprox.</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Evaluación y limpieza</td><td>45 min</td></tr>
+          <tr><td>Blanqueamiento</td><td>60 min</td></tr>
+          <tr><td>Evaluación de ortodoncia</td><td>40 min</td></tr>
+          <tr><td>Urgencia por dolor</td><td>Mismo día</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <p class="footer__brand">Aura Dental</p>
+        <p>Av. Principal 123, Centro</p>
+      </div>
+      <dl class="footer__info">
+        <div><dt>Lunes a viernes</dt><dd>9:00 a 19:00</dd></div>
+        <div><dt>Sábado</dt><dd>9:00 a 14:00</dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/56971389276" target="_blank" rel="noopener">+56 9 7138 9276</a></dd></div>
+        <div><dt>Correo</dt><dd><a href="mailto:Bryanduran0908@gmail.com">Bryanduran0908@gmail.com</a></dd></div>
+      </dl>
+    </div>
+    <div class="wrap footer__legal">© <span id="year"></span> Aura Dental</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
